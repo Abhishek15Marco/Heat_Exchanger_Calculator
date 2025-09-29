@@ -31,8 +31,8 @@ LMTD = lmtd(90, 60, 20, 41, flow_type = "counter")
 
 A = area_required(Q_hot, U, LMTD)
 
-print( "LMTD for counterflow : {LMTD:.2f} K" )
-print( "Required area : {A:.2f} m2" )
+print( f"LMTD for counterflow : {LMTD:.2f} K" )
+print( f"Required area : {A:.2f} m2" )
 
 # plotting T profiles for the counterflow
 
