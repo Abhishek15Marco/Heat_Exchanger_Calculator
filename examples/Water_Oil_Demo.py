@@ -4,7 +4,7 @@ import sys, os
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
-from src.heat_exchanger import heat_load, lmtd, area_required
+from src.Heat_Exchanger import heat_load, lmtd, area_required
 
 import matplotlib.pyplot as plt
 # using matplotlib for plotting
