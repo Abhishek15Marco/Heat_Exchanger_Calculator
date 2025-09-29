@@ -20,7 +20,7 @@ U = 450 # U is overall heat transfer coefficient W/m2.K
 Q_hot = heat_load(1.0, 4180, 90, 60)
 Q_cold = heat_load(1.5, 2000, 20, 41)
 
-print( "Heat load from the hot stream : "{Q_hot/1000:.2f} " kW" )
+print( f"Heat load from the hot stream : "{Q_hot/1000:.2f} " kW" )
 print( "Heat load from the cold stream : {Q_cold/1000:.2f} kW" )
 
 # lmtd for counterflow
