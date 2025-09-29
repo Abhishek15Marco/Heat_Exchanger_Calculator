@@ -29,7 +29,7 @@ def lmtd (TH_in, TH_out, TC_in, TC_out, flow_type):
   else:
     raise ValueError("flow_type must be either 'parallel' or 'counter'")
 
-  if (dT1=dT2):
+  if (dT1==dT2):
     # To avoid log(1)
     return dT1
   return (dT1 - dT2) / np.log(dT1/dT2)
