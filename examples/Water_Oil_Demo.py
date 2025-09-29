@@ -14,9 +14,32 @@ U = 450 # U is overall heat transfer coefficient W/m2.K
 Q_hot = heat_load(1.0, 4180, 90, 60)
 Q_cold = heat_load(1.5, 2000, 20, 41)
 
-print( "Heat load from the hot stream : {Q_hot/1000:.2f} kW")
-print( "Heat load from the cold stream : {Q_cold/1000:.2f} kW")
+print( "Heat load from the hot stream : {Q_hot/1000:.2f} kW" )
+print( "Heat load from the cold stream : {Q_cold/1000:.2f} kW" )
 
 # lmtd for counterflow
 
-LMTD = lmtd(90, 60, 20, 41)
+LMTD = lmtd(90, 60, 20, 41, flow_type = "counter")
+
+# required area
+
+A = area_required(Q_hot, U, LMTD)
+
+print( "LMTD for counterflow : {LMTD:.2f} K" )
+print( "Required area : {A:.2f} m2" )
+
+# plotting T profiles for the counterflow
+
+x = [0, 1]
+Th = [90, 60]
+Tc = [20, 41]
+
+# matplot functions
+
+plt.plot(x, Th, 'r-o', label='Hot fluid')
+plt.plot(x, Tc[::-1], 'b-o', label='Cold fluid (counterflow)')
+plt.xlabel("Exchanger length (Normalized)")
+plt.ylabel("Temperature (°C)")
+plt.title("Temperature profiles in counterflow HX")
+plt.legend()
+plt.show()
