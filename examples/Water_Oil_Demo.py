@@ -19,4 +19,4 @@ print( "Heat load from the cold stream : {Q_cold/1000:.2f} kW")
 
 # lmtd for counterflow
 
-LMTD = lmtd(
+LMTD = lmtd(90, 60, 20, 41)
