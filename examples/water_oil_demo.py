@@ -4,12 +4,10 @@ import sys, os
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
-from src.Heat_Exchanger import heat_load, lmtd, area_required
+from src.heat_exchanger import heat_load, lmtd, area_required
 
 import matplotlib.pyplot as plt
 # using matplotlib for plotting
-
-from src.Heat_Exchanger.py import heat_load, lmtd, area_required
 
 # As an example taking hot water to heat up oil
 # water : m_dot = 1.0 kg/s, Cp = 4180 J/kg.K, T_in = 90 deg C, T_out = 60 deg C
